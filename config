@@ -54,11 +54,11 @@ bindcode $mod+Shift+24 kill
 #bindsym Shift+Ctrl+L exec i3lock -i /home/dimav/Pictures/ak47-181456.png -t
 bindcode Shift+Ctrl+46 exec i3lock -i ~/.i3/ak47-181456.png -t
 
-bindsym $alt+Shift+1 exec setxkbmap us
+bindcode $mod+52 exec ~/.i3/scripts/kbdswitch
 #bindcode $alt+Shift+10 exec setxkbmap us
-bindsym $alt+Shift+2 exec setxkbmap ru
+#indsym $alt+Shift+2 exec setxkbmap ru
 #bindcode $alt+Shift+11 exec setxbmap ru
-bindsym $alt+Shift+3 exec setxkbmap dvorak
+#indsym $alt+Shift+3 exec setxkbmap dvorak
 #bindcode $alt+Shift+12 exec setxbmap dvorak
 
 # start dmenu (a program launcher)
