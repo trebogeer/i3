@@ -13,7 +13,7 @@ exec feh --bg-scale $HOME/.i3/ak47-181456.png &
 
 #sleep 1
 
-exec i3status 
+exec i3status
 
 #i3-msg restart &
 

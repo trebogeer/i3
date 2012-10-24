@@ -52,7 +52,7 @@ bindcode $mod+36 exec i3-sensible-terminal
 bindcode $mod+Shift+24 kill
 
 #bindsym Shift+Ctrl+L exec i3lock -i /home/dimav/Pictures/ak47-181456.png -t
-bindcode Shift+Ctrl+46 exec i3lock -i ~/.i3/ak47-181456.png -t
+bindcode Shift+Ctrl+46 exec setxkbmap us && i3lock -i ~/.i3/ak47-181456.png -t
 
 bindcode $mod+52 exec ~/.i3/scripts/kbdswitch
 #bindcode $alt+Shift+10 exec setxkbmap us
