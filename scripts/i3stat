@@ -4,6 +4,7 @@
 
 NMON=$(xrandr -d :0 -q | grep ' connected' | wc -l)
 
+#echo $NMON
 if [ "$NMON" = "2" ]; then
   $HOME/bin/dblmon 
 fi
@@ -13,7 +14,7 @@ exec feh --bg-scale $HOME/.i3/ak47-181456.png &
 
 #sleep 1
 
-exec i3status
+exec i3status -c $HOME/.i3/i3status.conf
 
 #i3-msg restart &
 

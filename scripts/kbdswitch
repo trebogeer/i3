@@ -17,18 +17,14 @@ echo $cur_kbm
 case "$cur_kbm" in
   us\(dvorak\))
         kbm=$([ -z "$1" ] && echo "us" || echo "ru")
-        echo 1
         ;;
   ru)
         kbm=$([ -z "$1" ] && echo "dvorak" || echo "us")
-        echo 1
         ;;
   us)
         kbm=$([ -z "$1" ] && echo "ru" || echo "dvorak")
-        echo 1
         ;;
    *) 
-        echo "Pizdets"
         ;;
 esac
 echo $kbm

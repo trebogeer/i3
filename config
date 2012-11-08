@@ -19,7 +19,8 @@ set $alt Mod1
 
 # default applications
 #set $term urxvtcd
-set $term gnome-terminal
+#set $term gnome-terminal
+set $term urxvt
 #set $browser firefox
 set $browser google-chrome
 #set $mua chromium
@@ -45,7 +46,9 @@ new_window 1pixel
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindcode $mod+36 exec i3-sensible-terminal
+#bindcode $mod+36 exec aterm -tr -trsb -sh 50 -fade 30 -sr -fg lightgrey 
+#bindcode $mod+36 exec gnome-terminal --hide-menubar
+bindcode $mod+36 exec urxvtc
 
 # kill focused window
 #bindsym $mod+Shift+Q kill
@@ -221,7 +224,6 @@ assign [class="Thunderbird"] 9
 #exec volumeicon -b
 #exec $browser
 #exec $term
-#xec $HOME/.wmii/scripts/checkmon
 #exec $mua
 #exec $jabber
 #exec $email
@@ -232,17 +234,18 @@ assign [class="Thunderbird"] 9
 #exec $mp3
 #exec skype
 # }}}
-exec gnome-keyring-daemon --components keyring,ssh,pkcs11 &
-exec gnome-screensaver &
-exec nm-applet &
-exec gnome-sound-applet &
-exec synergy &
+#exec gnome-keyring-daemon --components keyring,ssh,pkcs11 &
+#exec gnome-screensaver &
+#exec nm-applet &
+#exec gnome-sound-applet &
+#exec synergy &
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 #	output primary
         status_command ~/.i3/scripts/i3stat
+#        status_command i3status
 #	tray_output primary
 #	output HDMI1
 }
