@@ -12,7 +12,7 @@
 
 
 cur_kbm=`setxkbmap -print | grep xkb_symbols | awk -F"+" '{print $2}'`
-echo $cur_kbm
+#echo $cur_kbm
 
 case "$cur_kbm" in
   us\(dvorak\))
@@ -27,7 +27,10 @@ case "$cur_kbm" in
    *) 
         ;;
 esac
-echo $kbm
-exec setxkbmap $kbm
-
-exit 1
+#echo $kbm
+setxkbmap $kbm 
+killall -s USR1 i3status
+#killall -s USR1 i3status
+cur_kbm=`setxkbmap -print | grep xkb_symbols | awk -F"+" '{print $2}'`
+#echo $cur_kbm
+#exit 1
