@@ -135,8 +135,10 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 0
 
-bindsym $mod+m move scratchpad
-bindsym $mod+o scratchpad show
+#bindsym $mod+m move scratchpad
+bindcode $mod+58 move scratchpad
+#bindsym $mod+o scratchpad show
+bindcode $mod+32 scratchpad show
 
 # move focused container to workspace
 #bindsym $mod+Shift+exclam move workspace 1
